@@ -6,7 +6,7 @@ ENV DOCKER_CE_VERSION 5:20.10.14~3-0~debian-bullseye
 ENV DOCKER_CE_CLI_VERSION 5:20.10.14~3-0~debian-bullseye
 ENV CONTAINERD_VERSION 1.5.11-1
 ENV GOVERSION 1.17.7
-ENV PACKAGE_TOOLS_VERSION v0.0.8
+ENV PACKAGE_TOOLS_VERSION v0.0.9
 
 RUN apt-get update && \
     apt-get install -y make gnupg lsb-release
