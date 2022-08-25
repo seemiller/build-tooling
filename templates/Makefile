@@ -3,7 +3,7 @@ IMG_VERSION_OVERRIDE ?= $(IMG_DEFAULT_TAG)
 COMPONENTS ?= ""?""?""
 
 BUILD_TOOLING_CONTAINER_IMAGE ?= ghcr.io/seemiller/build-tooling
-PACKAGING_CONTAINER_IMAGE ?= ghcr.io/seemiller/packaging
+PACKAGING_CONTAINER_IMAGE ?= ghcr.io/seemiller/package-tooling
 VERSION ?= $(shell cat ../version)
 
 .PHONY: init
