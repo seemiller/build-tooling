@@ -1,4 +1,4 @@
-module github.com/vmware-tanzu/build-tooling-for-integrations
+module github.com/seemiller/build-tooling
 
 go 1.17
 

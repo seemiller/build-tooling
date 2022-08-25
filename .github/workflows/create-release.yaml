@@ -7,7 +7,7 @@ on:
         required: true
 jobs:
   createrelease:
-    if: github.repository == 'vmware-tanzu/build-tooling-for-integrations'
+    if: github.repository == 'seemiller/build-tooling'
     runs-on: ubuntu-latest
 
     steps:
@@ -60,7 +60,7 @@ jobs:
           body: |
             This PR was created in response to a workflow running.
       - name: Publish Go Module
-        run: GOPROXY=proxy.golang.org go list -m github.com/vmware-tanzu/build-tooling-for-integrations@v${{ github.event.inputs.version }}
+        run: GOPROXY=proxy.golang.org go list -m github.com/seemiller/build-tooling@v${{ github.event.inputs.version }}
       - name: Run build, tag and publish tasks
         run: |
           set -e -x

@@ -13,8 +13,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/vmware-tanzu/build-tooling-for-integrations/package-tools/constants"
-	"github.com/vmware-tanzu/build-tooling-for-integrations/package-tools/utils"
+	"github.com/seemiller/build-tooling/package-tools/constants"
+	"github.com/seemiller/build-tooling/package-tools/utils"
 )
 
 // packageBundlePushCmd is for pushing package bundles

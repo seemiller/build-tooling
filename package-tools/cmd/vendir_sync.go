@@ -13,8 +13,8 @@ import (
 	"github.com/spf13/cobra"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/vmware-tanzu/build-tooling-for-integrations/package-tools/constants"
-	"github.com/vmware-tanzu/build-tooling-for-integrations/package-tools/utils"
+	"github.com/seemiller/build-tooling/package-tools/constants"
+	"github.com/seemiller/build-tooling/package-tools/utils"
 )
 
 // packageVendirSyncCmd is for sync the package

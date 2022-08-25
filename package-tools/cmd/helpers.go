@@ -10,7 +10,7 @@ import (
 
 	"gopkg.in/yaml.v2"
 
-	"github.com/vmware-tanzu/build-tooling-for-integrations/package-tools/constants"
+	"github.com/seemiller/build-tooling/package-tools/constants"
 )
 
 func readPackageValues(projectRootDir string) (PackageValues, error) {

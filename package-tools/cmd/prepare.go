@@ -17,7 +17,7 @@ import (
 	"github.com/spf13/cobra"
 	"gopkg.in/yaml.v2"
 
-	"github.com/vmware-tanzu/build-tooling-for-integrations/package-tools/utils"
+	"github.com/seemiller/build-tooling/package-tools/utils"
 )
 
 // prepareCmd is for preparing package tooling for building packages

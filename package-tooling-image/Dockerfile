@@ -1,6 +1,6 @@
 FROM bitnami/golang:1.17
 
-LABEL org.opencontainers.image.source=https://github.com/vmware-tanzu/build-tooling-for-integrations
+LABEL org.opencontainers.image.source=https://github.com/seemiller/build-tooling
 
 ENV DOCKER_CE_VERSION 5:20.10.14~3-0~debian-bullseye
 ENV DOCKER_CE_CLI_VERSION 5:20.10.14~3-0~debian-bullseye
@@ -28,8 +28,7 @@ RUN curl -sSL https://get.docker.com/ | sh
 COPY version /version
 
 # Uncomment after repo is public
-#RUN export VERSION=$(cat /version) && go install github.com/vmware-tanzu/build-tooling-for-integrations/package-tools@${VERSION} && rm -rf /version
-RUN export VERSION=$(cat /version) && go install github.com/yharish991/build-tooling/package-tools@${VERSION} && rm -rf /version
+RUN export VERSION=$(cat /version) && go install github.com/seemiller/build-tooling/package-tools@${VERSION} && rm -rf /version
 
 COPY package-tooling-image/build-packages.sh /build-packages.sh
 ENTRYPOINT ["/build-packages.sh"]

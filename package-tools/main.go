@@ -3,7 +3,7 @@
 
 package main
 
-import "github.com/vmware-tanzu/build-tooling-for-integrations/package-tools/cmd"
+import "github.com/seemiller/build-tooling/package-tools/cmd"
 
 func main() {
 	cmd.Execute()
