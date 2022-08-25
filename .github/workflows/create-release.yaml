@@ -31,11 +31,13 @@ jobs:
           version: v${{ github.event.inputs.version }}
       - name: Update the version
         run: printf 'v${{ github.event.inputs.version }}\n' > version
-      - name: Commit version and changelog
+      - name: Update templates/Makefile
+        run: sed '/^VERSION/s/.*/VERSION ?= v0.0.2/g' templates/Makefile > makefile-version-update && mv makefile-version-update templates/Makefile
+      - name: Commit version, templates/Makefile and CHANGELOG.md
         id: make-commit
         run: |
-          git add version CHANGELOG.md
-          git commit --message "Update version to v${{ github.event.inputs.version }}; Update CHANGELOG"
+          git add version templates/Makefile CHANGELOG.md
+          git commit --message "Update version to v${{ github.event.inputs.version }}; Update Makefile; Update CHANGELOG"
           echo "::set-output name=commit::$(git rev-parse HEAD)"
       - name: Create Release
         uses: thomaseizinger/create-release@1.0.0
