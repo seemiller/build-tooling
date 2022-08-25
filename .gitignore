@@ -1,0 +1,27 @@
+# Ignore everything
+*
+
+# Except these files
+!.gitignore
+!.github/**
+
+!*.go
+!go.sum
+!go.mod
+
+!Dockerfile
+!Makefile
+!oci.env
+
+!*.md
+
+!*.yaml
+!*.yml
+
+!*.sh
+
+!version
+
+# ...even if they are in subdirectories
+!*/
+.idea
