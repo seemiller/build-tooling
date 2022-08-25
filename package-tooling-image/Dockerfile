@@ -6,7 +6,7 @@ ENV DOCKER_CE_VERSION 5:20.10.14~3-0~debian-bullseye
 ENV DOCKER_CE_CLI_VERSION 5:20.10.14~3-0~debian-bullseye
 ENV CONTAINERD_VERSION 1.5.11-1
 ENV GOVERSION 1.17.7
-ENV VERSION v0.0.5
+ENV PACKAGE_TOOLS_VERSION v0.0.5
 
 RUN apt-get update && \
     apt-get install -y make gnupg lsb-release
@@ -27,7 +27,7 @@ RUN apt-get update && \
 RUN curl -sSL https://get.docker.com/ | sh
 
 # Uncomment after repo is public
-RUN go install github.com/seemiller/build-tooling/package-tools@${VERSION}
+RUN go install github.com/seemiller/build-tooling/package-tools@${PACKAGE_TOOLS_VERSION}
 
 COPY package-tooling-image/build-packages.sh /build-packages.sh
 ENTRYPOINT ["/build-packages.sh"]

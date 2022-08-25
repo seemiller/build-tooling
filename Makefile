@@ -23,9 +23,7 @@ build-main: ## Build the Docker container image for build-tooling
 
 .PHONY: build-package-tooling
 build-package-tooling: ## Build the Docker container image for package-tooling
-	cp version package-tooling-image/version
 	docker build . --tag package-tooling --file package-tooling-image/Dockerfile
-	rm -rf package-tooling-image/version
 
 .PHONY: build-all
 build-all: build-main build-package-tooling ## Builds main and package-tooling
