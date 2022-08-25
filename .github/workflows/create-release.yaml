@@ -37,13 +37,13 @@ jobs:
           mv makefile-version-update templates/Makefile
           cp Makefile examples/multi-module-integration
           cp Makefile examples/simple-integration
-          sed '/^ENV VERSION/s/.*/ENV VERSION v${{ github.event.inputs.version }}/g' package-tooling-image/Dockerfile > tmp-dockerfile
+          sed '/^ENV PACKAGE_TOOLS_VERSION/s/.*/ENV PACKAGE_TOOLS_VERSION v${{ github.event.inputs.version }}/g' package-tooling-image/Dockerfile > tmp-dockerfile
           mv tmp-dockerfile package-tooling-image/Dockerfile
-      - name: Commit version, templates/Makefile and CHANGELOG.md
+      - name: Commit release updates
         id: make-commit
         run: |
           git add version templates/Makefile examples/ CHANGELOG.md
-          git commit --message "Update version to v${{ github.event.inputs.version }}; Update Makefiles; Update CHANGELOG"
+          git commit --message "Updates for release v${{ github.event.inputs.version }}"
           echo "::set-output name=commit::$(git rev-parse HEAD)"
       - name: Create Release
         uses: thomaseizinger/create-release@1.0.0
