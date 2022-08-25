@@ -4,8 +4,6 @@ oci-config ?= oci.env
 include $(oci-config)
 export $(shell sed 's/=.*//' $(oci-config))
 
-VERSION ?= v0.0.7
-
 ##### Tasks
 
 .PHONY: help
