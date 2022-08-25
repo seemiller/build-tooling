@@ -5,6 +5,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [v0.0.8] - 2022-08-25
+
 ## [v0.0.7] - 2022-08-25
 
 ## [v0.0.5] - 2022-08-25
@@ -17,7 +19,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial release
 
-[Unreleased]: https://github.com/seemiller/build-tooling/compare/v0.0.7...HEAD
+[Unreleased]: https://github.com/seemiller/build-tooling/compare/v0.0.8...HEAD
+
+[v0.0.8]: https://github.com/seemiller/build-tooling/compare/v0.0.7...v0.0.8
 
 [v0.0.7]: https://github.com/seemiller/build-tooling/compare/v0.0.5...v0.0.7
 

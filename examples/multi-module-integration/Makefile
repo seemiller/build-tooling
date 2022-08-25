@@ -1,9 +1,10 @@
 ##### Config
-
 # Use a custom config file: make oci-config=custom.env build
 oci-config ?= oci.env
 include $(oci-config)
 export $(shell sed 's/=.*//' $(oci-config))
+
+VERSION ?= v0.0.7
 
 ##### Tasks
 
