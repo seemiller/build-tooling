@@ -32,7 +32,11 @@ jobs:
       - name: Update the version
         run: printf 'v${{ github.event.inputs.version }}\n' > version
       - name: Update templates/Makefile
-        run: sed '/^VERSION/s/.*/VERSION ?= v0.0.2/g' templates/Makefile > makefile-version-update && mv makefile-version-update templates/Makefile
+        run: |
+          sed '/^VERSION/s/.*/VERSION ?= v${{ github.event.inputs.version }}/g' templates/Makefile > makefile-version-update
+          mv makefile-version-update templates/Makefile
+          cp Makefile examples/multi-module-integration
+          cp Makefile examples/simple-integration
       - name: Commit version, templates/Makefile and CHANGELOG.md
         id: make-commit
         run: |
