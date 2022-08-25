@@ -4,7 +4,7 @@ COMPONENTS ?= ""?""?""
 
 BUILD_TOOLING_CONTAINER_IMAGE ?= ghcr.io/seemiller/build-tooling
 PACKAGING_CONTAINER_IMAGE ?= ghcr.io/seemiller/package-tooling
-VERSION ?= v0.0.5
+VERSION ?= v0.0.6
 
 .PHONY: init
 init: ## Fetch the Dockerfile and pull image needed to build packages
