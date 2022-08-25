@@ -42,7 +42,7 @@ jobs:
       - name: Commit release updates
         id: make-commit
         run: |
-          git add version templates/Makefile examples/ CHANGELOG.md
+          git add version CHANGELOG.md examples/ package-tooling-image/Dockerfile templates/Makefile
           git commit --message "Updates for release v${{ github.event.inputs.version }}"
           echo "::set-output name=commit::$(git rev-parse HEAD)"
       - name: Create Release
